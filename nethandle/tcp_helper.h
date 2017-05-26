@@ -9,6 +9,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include "pcap_helper.h"
+#include <string>
 using namespace std;
 
 typedef unsigned int uint;
@@ -29,7 +30,7 @@ class TCPhdr{
 
 class Manager{
 	unsigned int id;
-    char * nowip;
+    string nowip;
     bool check;
 	
 public:

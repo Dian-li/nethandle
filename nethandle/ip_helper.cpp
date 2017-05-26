@@ -9,7 +9,8 @@ size_t IPhdr::getHeadLength(){
         return IP_HL(iphdr)*4;
     }
 u_int8_t IPhdr::getProtocol(){//IPPROTO_TCP or IPPROTO_UDP
-        return ntohs(iphdr->ip_p);
+       // return ntohs(iphdr->ip_p);
+        return iphdr->ip_p;
     }
 size_t IPhdr::getVersion(){
         return IP_V(iphdr);
